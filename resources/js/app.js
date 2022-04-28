@@ -17,7 +17,9 @@ Vue.component(AlertError.name, AlertError)
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
-
+let routes = [
+    { path: '/dashboard', component: require('./components/Dashboard.vue').default  }
+  ]
 
 
 const router = new VueRouter({
@@ -49,6 +51,6 @@ Vue.component('subheader-dashboard', require('./components/SubheaderDashboard.vu
 
 const app = new Vue({
     el: '#app',
-    
+    router
 });
 
