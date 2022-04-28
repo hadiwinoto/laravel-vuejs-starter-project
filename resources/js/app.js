@@ -9,6 +9,7 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 import { Form, HasError, AlertError } from 'vform'
+import axios from 'axios';
 
 window.Form = Form;
 Vue.component(HasError.name, HasError)
@@ -48,7 +49,7 @@ Vue.component('subheader-dashboard', require('./components/SubheaderDashboard.vu
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
+ Vue.prototype.$http = axios;
 const app = new Vue({
     el: '#app',
     router
